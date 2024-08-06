@@ -4,15 +4,18 @@ import javax.swing.*;
 
 public class InfoPane {
 	private int interval;
-	private int length;
-	private int height;
+	protected int length;
+	protected int height;
 	private Timer timer;
-	private JPanel container;
+	protected JPanel container;
 	
 	public InfoPane(int interval, int length, int height) {
 		this.interval = interval;
 		this.height = height;
 		this.length = length;
+		container = new JPanel();
+		container.setLayout(null);
+		container.setSize(length, height);
 	}
 	public void display() {
 		this.container.setVisible(true);
