@@ -58,7 +58,7 @@ public class Program {
 		timerHelper(station);
 		timerHelper(weather);
 		timerHelper(map);
-		
+	/*
 		mainWindow.setVisible(true);
 		//testing
 		Timer timer = new Timer();
@@ -67,7 +67,7 @@ public class Program {
 			public void run() {
 				System.exit(0);
 			}
-		}, 15000);
+		}, 000);*/
 		
 	}
 	private static void timerHelper(InfoPane pane) {
