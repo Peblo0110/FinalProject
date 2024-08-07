@@ -46,7 +46,8 @@ public class WeatherPane extends InfoPane{
 			e.printStackTrace();
 		}
 		info = new JLabel();
-		info.setBounds(0, height/2, length, height/2);
+		info.setSize(length, height/2);
+		info.setBounds(length/4, height/2, length/2, height/2);
 		loadInfo();
 		CITY = city;
 		COUNTRY = location;
@@ -132,8 +133,8 @@ public class WeatherPane extends InfoPane{
 	}
 	private void loadInfo() {
 		//Lazy
-		String labelText = SKY_CONDITIONS + ", " + TEMP + UNIT + ", Feels like" + FEELS_LIKE + UNIT + ", " 
-				+ WINDSPEED + "km/h, " + PERCIPITATION + " " + RAIN_UNIT;
+		String labelText = "<html><center>" + SKY_CONDITIONS + "<br>" + TEMP + UNIT + "<br>Feels like" + FEELS_LIKE + UNIT + "<br>" 
+				+ WINDSPEED + "km/h<br>" + PERCIPITATION + " " + RAIN_UNIT;
 		info.setText(labelText);
 	}
 	@Override

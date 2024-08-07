@@ -2,6 +2,7 @@ package final_project;
 
 import java.awt.Color;
 
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 
 public class StationPane extends InfoPane{
@@ -14,13 +15,20 @@ public class StationPane extends InfoPane{
 		trn = train;
 		stopNames = new JLabel[5];
 		String tmpUID = trn.getStop();
+		Color clr = Color.red;
 		boolean tmpBackwards = trn.getBackwards();
 		for(int i = 0; i < 5; i++) {
 			stopNames[i] = new JLabel();
-			stopNames[i].setSize(240,100);
-			stopNames[i].setBounds(240*i, 0, 240, 100);
+			stopNames[i].setSize((length/5), 200);
+			stopNames[i].setBounds((length/5)*i, 0, (length/5), height);
 			stopNames[i].setText("WHERE IT AT");
-			stopNames[i].setBackground(Color.red);
+			if(tmpUID.charAt(0) == 'B') {
+				clr = Color.blue;
+			}else if(tmpUID.charAt(0) == 'G') {
+				clr = Color.green;
+			}
+			stopNames[i].setBackground(clr);
+			stopNames[i].setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, Color.black));
 			container.add(stopNames[i]);
 			stopNames[i].setVisible(true);
 		}

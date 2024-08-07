@@ -70,10 +70,8 @@ public class TrainSimDriver {
         updateTrains();
         timer = new Timer();
         timer.schedule(task, 15100, 15100);
-        System.out.println("Finished Sim driver init");
 	}
 	public static void updateTrains() {
-		System.out.println("Updating Trains...");
 		Scanner scan = new Scanner(reader);
 		if(!scan.hasNext()) {
 			return;
