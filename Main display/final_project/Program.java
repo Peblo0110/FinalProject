@@ -58,9 +58,10 @@ public class Program {
 		timerHelper(station);
 		timerHelper(weather);
 		timerHelper(map);
-	/*
+		
 		mainWindow.setVisible(true);
-		//testing
+		/**
+  		//testing
 		Timer timer = new Timer();
 		timer.schedule(new TimerTask() {
 			@Override
